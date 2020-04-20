@@ -1,4 +1,6 @@
-package com.zkejid.constructor.framework;
+package com.zkejid.constructor.core.impl;
+
+import com.zkejid.constructor.core.api.v1.ConstructorPart;
 
 import java.util.*;
 
