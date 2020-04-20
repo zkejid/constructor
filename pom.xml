@@ -11,6 +11,10 @@
 
     <description>Constructor - is a framework that supports modular development of applications.</description>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <modules>
         <module>core-impl</module>
         <module>core-api</module>
