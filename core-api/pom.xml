@@ -9,13 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>core-impl</artifactId>
+    <artifactId>core-api</artifactId>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>core-api</artifactId>
-        </dependency>
-    </dependencies>
 
 </project>

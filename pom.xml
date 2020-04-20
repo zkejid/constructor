@@ -13,6 +13,7 @@
 
     <modules>
         <module>core-impl</module>
+        <module>core-api</module>
     </modules>
 
     <build>
@@ -27,5 +28,15 @@
             </plugin>
         </plugins>
     </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>core-api</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
