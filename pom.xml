@@ -6,9 +6,15 @@
 
     <groupId>org.example</groupId>
     <artifactId>constructor</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <description>Constructor - is a framework that supports modular development of applications.</description>
+
+    <modules>
+        <module>core-impl</module>
+    </modules>
+
     <build>
         <plugins>
             <plugin>
@@ -21,6 +27,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>
