@@ -1,6 +1,8 @@
 package com.zkejid.constructor.core.impl;
 
+import com.zkejid.constructor.core.api.v1.ConstructionException;
 import com.zkejid.constructor.core.api.v1.ConstructorPart;
+import com.zkejid.constructor.core.api.v1.EntryPoint;
 
 import java.util.*;
 
@@ -26,8 +28,18 @@ public class Main {
         }
 
         for (ConstructorPart part : initializationList) {
-            part.checkInterfacesListAndStart();
+            part.verifyNecessaryInterfaces();
         }
+
+        final List<Object> entryPoints = librarium.getRecord(EntryPoint.class);
+        if (entryPoints == null) {
+            return;
+        }
+        if (entryPoints.size() > 1) {
+            throw new ConstructionException("Core module supports only one entry point");
+        }
+        final EntryPoint entryPoint = (EntryPoint) entryPoints.get(0);
+        entryPoint.main(args);
     }
 
 }
