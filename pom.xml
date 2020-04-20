@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>constructor</artifactId>
+    <groupId>com.zkejid.constructor</groupId>
+    <artifactId>core</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
 
     <description>Constructor - is a framework that supports modular development of applications.</description>
 
@@ -37,9 +37,9 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.example</groupId>
+                <groupId>com.zkejid.constructor</groupId>
                 <artifactId>core-api</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>0.1.0-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
