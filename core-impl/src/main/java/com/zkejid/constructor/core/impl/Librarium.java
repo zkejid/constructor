@@ -1,6 +1,7 @@
 package com.zkejid.constructor.core.impl;
 
 import com.zkejid.constructor.core.api.v1.ConstructorPart;
+import com.zkejid.constructor.core.api.v1.EntryPoint;
 
 import java.util.*;
 
@@ -39,7 +40,11 @@ public class Librarium {
         final String interfaceName = interfaceNecessary.getName();
         final List<Object> record = catalog.get(interfaceName);
         if (record == null) {
-            throw new LibrariumException("Implementation not registered for " + interfaceName);
+            if (isSystemInterface(interfaceNecessary)) {
+                return null;
+            } else {
+                throw new LibrariumException("Implementation not registered for " + interfaceName);
+            }
         }
         for (Object implementation : record) {
             if (interfaceNecessary.isAssignableFrom(implementation.getClass())) {
@@ -91,6 +96,10 @@ public class Librarium {
             }
         }
         return interfaces.toArray(new Class<?>[0]);
+    }
+
+    private boolean isSystemInterface(Class<?> aClass) {
+        return EntryPoint.class.equals(aClass);
     }
 
 }

@@ -5,18 +5,16 @@ import com.zkejid.constructor.core.api.v1.ConstructorPart;
 import com.zkejid.constructor.core.api.v1.EntryPoint;
 
 import java.util.*;
+import java.util.function.Supplier;
 
 /**
  * Entrance point to the application while starting it in a {@code java -jar} way.
  */
 public class Constructor {
 
-    private PartProvider partProvider = new PartProvider();
+    private final Supplier<List<ConstructorPart>> partProvider;
 
-    public Constructor() {
-    }
-
-    public Constructor(PartProvider partProvider) {
+    public Constructor(Supplier<List<ConstructorPart>> partProvider) {
         this.partProvider = partProvider;
     }
 
@@ -26,7 +24,7 @@ public class Constructor {
      * @param args Arguments to business logic module. Method passes arguments as is.
      */
     public void main(String[] args) {
-        List<ConstructorPart> initializationList = partProvider.getParts();
+        List<ConstructorPart> initializationList = partProvider.get();
 
         final Librarium librarium = new Librarium();
         librarium.makeCatalog(initializationList);
