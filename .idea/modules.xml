@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/constructor.iml" filepath="$PROJECT_DIR$/constructor.iml" />
       <module fileurl="file://$PROJECT_DIR$/core-api/core-api.iml" filepath="$PROJECT_DIR$/core-api/core-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core-helloworld/core-helloworld.iml" filepath="$PROJECT_DIR$/core-helloworld/core-helloworld.iml" />
       <module fileurl="file://$PROJECT_DIR$/core-impl/core-impl.iml" filepath="$PROJECT_DIR$/core-impl/core-impl.iml" />
     </modules>
   </component>

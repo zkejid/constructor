@@ -45,8 +45,10 @@ public interface ConstructorPart {
     /**
      * Returns an implementation of given interface. Framework guarantees that given interface would be one of
      * {@link #getInterfacesProvided}.
+     *
+     * @throws ConstructionException if {@code anInterface} is not provided by this part.
      */
-    Object getImplementation(Class<?> anInterface);
+    Object getImplementation(Class<?> anInterface) throws ConstructionException;
 
     /**
      * Puts an implementation of interface, which this part depends on. Framework guarantees that given interface would
