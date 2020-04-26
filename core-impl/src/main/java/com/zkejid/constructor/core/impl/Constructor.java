@@ -2,6 +2,7 @@ package com.zkejid.constructor.core.impl;
 
 import com.zkejid.constructor.core.api.v1.ConstructionException;
 import com.zkejid.constructor.core.api.v1.ConstructorPart;
+import com.zkejid.constructor.core.api.v1.CoreLogging;
 import com.zkejid.constructor.core.api.v1.EntryPoint;
 
 import java.util.*;
@@ -30,6 +31,7 @@ public class Constructor {
         librarium.makeCatalog(initializationList);
 
         linkModules(initializationList, librarium);
+        logCatalog(librarium);
         verifyApplicationBuild(initializationList);
         callEntryPoint(args, librarium);
     }
@@ -61,6 +63,18 @@ public class Constructor {
         }
         final EntryPoint entryPoint = (EntryPoint) entryPoints.get(0);
         entryPoint.main(args);
+    }
+
+    private void logCatalog(Librarium librarium) {
+        final List<Object> loggers = librarium.getRecord(CoreLogging.class);
+        if (loggers == null) {
+            return;
+        }
+        if (loggers.size() > 1) {
+            throw new ConstructionException("Core module supports only one logging interface");
+        }
+        CoreLogging logger = (CoreLogging) loggers.get(0);
+        logger.log(librarium.toString());
     }
 
 }

@@ -1,6 +1,7 @@
 package com.zkejid.constructor.core.impl;
 
 import com.zkejid.constructor.core.api.v1.ConstructorPart;
+import com.zkejid.constructor.core.api.v1.CoreLogging;
 import com.zkejid.constructor.core.api.v1.EntryPoint;
 
 import java.util.*;
@@ -99,7 +100,11 @@ public class Librarium {
     }
 
     private boolean isSystemInterface(Class<?> aClass) {
-        return EntryPoint.class.equals(aClass);
+        return EntryPoint.class.equals(aClass) || CoreLogging.class.equals(aClass);
     }
 
+    @Override
+    public String toString() {
+        return "Librarium contains " + catalog.size() + " interfaces. Mappings are " + catalog.toString();
+    }
 }
