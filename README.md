@@ -17,3 +17,6 @@ Recommended way to organize code in project is as follows. Each module should be
 
 ## Versioning
 Artifact versions of the Core Module follow the [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html) specification.
+
+## Logging
+Core classes use framework's own built-in interface for logging. Application should define an implementation of this interface in order to achieve logging for core classes. Implementation should be made in the form of Constructor Framework module providing implementation of ```CoreLogging.java``` interface. 
