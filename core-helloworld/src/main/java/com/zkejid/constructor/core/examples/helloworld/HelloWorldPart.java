@@ -33,9 +33,15 @@ public class HelloWorldPart implements ConstructorPart, EntryPoint, CoreLogging 
     }
 
     @Override
-    public void putImplementation(Class<?> interfaceNecessary, Object implementation) {
+    public void putImplementation(Class<?> interfaceNecessary, Object ... implementations) {
+        if (implementations.length != 1) {
+            throw new ConstructionException(
+                "Expect exactly one implementation of " + interfaceNecessary
+                    + ". Got " + implementations.length
+            );
+        }
         if (System.class.equals(interfaceNecessary)) {
-            system = (System) implementation;
+            system = (System) implementations[0];
         }
     }
 

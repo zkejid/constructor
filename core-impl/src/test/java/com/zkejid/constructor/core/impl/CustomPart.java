@@ -49,8 +49,9 @@ class CustomPart implements ConstructorPart {
     }
 
     @Override
-    public void putImplementation(Class<?> interfaceNecessary, Object implementation) {
-        implementationsNecessary.put(interfaceNecessary, implementation);
+    public void putImplementation(Class<?> interfaceNecessary, Object ... implementations) {
+        assert implementations.length == 1: "Expect exactly one implementation";
+        implementationsNecessary.put(interfaceNecessary, implementations[0]);
     }
 
     @Override

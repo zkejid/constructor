@@ -162,7 +162,7 @@ class LibrariumTest {
         }
 
         @Override
-        public void putImplementation(Class<?> interfaceNecessary, Object implementation) {}
+        public void putImplementation(Class<?> interfaceNecessary, Object ... implementation) {}
 
         @Override
         public void verifyNecessaryInterfaces() throws ConstructionException {}

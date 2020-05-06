@@ -7,12 +7,17 @@
     <groupId>com.zkejid.constructor</groupId>
     <artifactId>core</artifactId>
     <packaging>pom</packaging>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <description>Constructor - is a framework that supports modular development of applications.</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <constructor.core.version>1.0.0</constructor.core.version>
+        <constructor.javasdk.version>0.1.0-SNAPSHOT</constructor.javasdk.version>
+        <junit.jupiter.version>5.6.2</junit.jupiter.version>
+        <maven.surefire.plugin.version>3.0.0-M4</maven.surefire.plugin.version>
+        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
     </properties>
 
     <modules>
@@ -26,7 +31,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>${maven.compiler.plugin.version}</version>
                 <configuration>
                     <source>9</source>
                     <target>9</target>
@@ -35,7 +40,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M4</version>
+                <version>${maven.surefire.plugin.version}</version>
             </plugin>
         </plugins>
     </build>
@@ -45,29 +50,29 @@
             <dependency>
                 <groupId>com.zkejid.constructor</groupId>
                 <artifactId>core-api</artifactId>
-                <version>0.1.0-SNAPSHOT</version>
+                <version>${constructor.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.zkejid.constructor</groupId>
                 <artifactId>core-impl</artifactId>
-                <version>0.1.0-SNAPSHOT</version>
+                <version>${constructor.core.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.zkejid.constructor</groupId>
                 <artifactId>javasdk-system-api</artifactId>
-                <version>0.1.0-SNAPSHOT</version>
+                <version>${constructor.javasdk.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.zkejid.constructor</groupId>
                 <artifactId>javasdk-system-impl</artifactId>
-                <version>0.1.0-SNAPSHOT</version>
+                <version>${constructor.javasdk.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter</artifactId>
-                <version>5.6.2</version>
+                <version>${junit.jupiter.version}</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>

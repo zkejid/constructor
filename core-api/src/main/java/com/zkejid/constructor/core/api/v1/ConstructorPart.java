@@ -51,11 +51,11 @@ public interface ConstructorPart {
     Object getImplementation(Class<?> anInterface) throws ConstructionException;
 
     /**
-     * Puts an implementation of interface, which this part depends on. Framework guarantees that given interface would
-     * be one of {@link #getInterfacesNecessary()}, and the implementation object would be an implementation of given
-     * interface indeed.
+     * Puts implementations of interface, which this part depends on. Framework guarantees that
+     * given interface would be one of {@link #getInterfacesNecessary()}, and each implementation
+     * object would be an implementation of given interface.
      */
-    void putImplementation(Class<?> interfaceNecessary, Object implementation);
+    void putImplementation(Class<?> interfaceNecessary, Object ... implementation);
 
     /**
      * Implement this method if your module would not work without any dependent interface. Implementation

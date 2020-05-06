@@ -40,9 +40,7 @@ public class Constructor {
         for (ConstructorPart part : initializationList) {
             for (Class<?> interfaceNecessary : part.getInterfacesNecessary()) {
                 final List<Object> record = librarium.getRecord(interfaceNecessary);
-                for (Object implementation : record) {
-                    part.putImplementation(interfaceNecessary, implementation);
-                }
+                part.putImplementation(interfaceNecessary, record.toArray());
             }
         }
     }
