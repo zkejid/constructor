@@ -23,7 +23,6 @@
     <modules>
         <module>core-impl</module>
         <module>core-api</module>
-        <module>core-helloworld</module>
     </modules>
 
     <build>
@@ -77,5 +76,19 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <profiles>
+        <profile>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <id>example-applications</id>
+            <!-- Module contains dependencies to outer constructor parts and fails clean build -->
+            <!-- You can build this module if dependent artifacts are in local repository -->
+            <modules>
+                <module>core-helloworld</module>
+            </modules>
+        </profile>
+    </profiles>
 
 </project>
