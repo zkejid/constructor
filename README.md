@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/zkejidsconstructor/core.svg?branch=master)](https://travis-ci.com/zkejidsconstructor/core)
 # Constructor Core module
 ## Overview
 Constructor is a framework for development of modular applications. The idea behind it is simple: split the whole application on separate modules linked through well documented and properly tested interfaces. 
