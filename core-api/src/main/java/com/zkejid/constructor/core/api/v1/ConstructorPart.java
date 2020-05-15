@@ -9,7 +9,7 @@ import java.util.Set;
  * <p>
  * Lifecycle of every part is as follows. As a first step caller method links part with the rest of an application. It
  * uses methods {@link #getInterfacesNecessary()}, {@link #getInterfacesProvided()}, {@link #getImplementation(Class)},
- * {@link #putImplementation(Class, Object)}. As a second step caller method calls
+ * {@link #putImplementation(Class, Object...)}. As a second step caller method calls
  * {@link #verifyNecessaryInterfaces()} to mark that the part is fully initialized and implementation code should
  * check inner integrity.
  */
@@ -21,7 +21,7 @@ public interface ConstructorPart {
      * However, implementation of {@link ConstructorPart} could define fallback if there is no necessary interface.
      * <p>
      * Implementation of each interface would be provided by caller method with
-     * {@link #putImplementation(Class, Object)}.
+     * {@link #putImplementation(Class, Object...)}.
      * <p>
      * If this part doesn't depend on any interface, method returns empty set. There is no null result.
      * <p>
