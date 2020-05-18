@@ -11,6 +11,10 @@
 
     <artifactId>core-impl</artifactId>
 
+    <name>Zkejid's Constructor Framework: base implementation</name>
+    <description>Implementation of Zkejid's Constructor Framework.</description>
+    <url>https://github.com/zkejidsconstructor/core/tree/master/core-impl</url>
+
     <dependencies>
         <dependency>
             <groupId>com.zkejid.constructor</groupId>
@@ -22,5 +26,21 @@
             <artifactId>junit-jupiter</artifactId>
         </dependency>
     </dependencies>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Ivan Panfilov</name>
+            <email>developer@zkejid.com</email>
+            <organization>Zkejid</organization>
+            <organizationUrl>https://github.com/zkejid</organizationUrl>
+        </developer>
+    </developers>
 
 </project>

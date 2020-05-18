@@ -11,5 +11,24 @@
 
     <artifactId>core-api</artifactId>
 
+    <name>Zkejid's Constructor Framework API</name>
+    <description>API for Zkejid's Constructor Framework.</description>
+    <url>https://github.com/zkejidsconstructor/core/tree/master/core-api</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Ivan Panfilov</name>
+            <email>developer@zkejid.com</email>
+            <organization>Zkejid</organization>
+            <organizationUrl>https://github.com/zkejid</organizationUrl>
+        </developer>
+    </developers>
 
 </project>

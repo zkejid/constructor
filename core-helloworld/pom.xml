@@ -11,6 +11,10 @@
 
     <artifactId>core-helloworld</artifactId>
 
+    <name>Zkejid's Constructor Framework: example application</name>
+    <description>Example application "Hello World" based on Zkejid's Constructor Framework.</description>
+    <url>https://github.com/zkejidsconstructor/core/tree/master/core-helloworld</url>
+
     <build>
         <plugins>
             <plugin>
@@ -60,5 +64,21 @@
             <artifactId>javasdk-system-impl</artifactId>
         </dependency>
     </dependencies>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Ivan Panfilov</name>
+            <email>developer@zkejid.com</email>
+            <organization>Zkejid</organization>
+            <organizationUrl>https://github.com/zkejid</organizationUrl>
+        </developer>
+    </developers>
 
 </project>
